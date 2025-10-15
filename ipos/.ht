@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IPos — The #1 POS for Ethiopian Businesses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <style>
+    /* Floating & Rotation */
+    @keyframes floatY { 0% { transform: translateY(0px); } 50% { transform: translateY(-18px); } 100% { transform: translateY(0px); } }
+    @keyframes rotate360 { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .float-slow { animation: floatY 6.5s ease-in-out infinite; }
+    .float-slower { animation: floatY 9.5s ease-in-out infinite; }
+    .rotate-slow { animation: rotate360 20s linear infinite; }
+
+    /* Screen mockup styles */
+    .mockup-screen { background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,250,250,0.85)); border-radius: 14px; box-shadow: 0 18px 40px rgba(8,15,40,0.08); border: 1px solid rgba(15,23,42,0.04); overflow: hidden; }
+    .status-pill { font-size: 12px; padding: 6px 10px; border-radius: 999px; font-weight:600; display:inline-flex; align-items:center; gap:8px; }
+    .chip { display:inline-block; padding:6px 10px; border-radius:8px; background:rgba(0,0,0,0.04); font-size:12px; }
+    /* small responsive tweaks */
+    @media (max-width:768px){ .hero-grid { grid-template-columns: 1fr !important; } }
+
+    /* FAQ Accordion Styles */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.2s ease-in-out; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Header -->
+  <header class="bg-white/60 backdrop-blur-sm sticky top-0 z-40 shadow-sm" data-aos="fade-down">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">I</div>
+        <div>
+          <div class="text-lg font-semibold text-indigo-600">IPos</div>
+          <div class="text-xs text-gray-500 -mt-0.5">Intelligent • Pos + Solutions</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-6 items-center text-sm text-gray-600">
+        <a href="#features" class="hover:text-indigo-600">Features</a>
+        <a href="#use-cases" class="hover:text-indigo-600">Use Cases</a>
+        <a href="#pricing" class="hover:text-indigo-600">Pricing</a>
+        <a href="#faq" class="hover:text-indigo-600">FAQ</a>
+        <a href="#demo" class="bg-indigo-600 text-white px-4 py-2 rounded-xl shadow-sm hover:bg-indigo-700">Live Demo</a>
+      </nav>
+      <div class="md:hidden">
+        <a href="#demo" class="bg-indigo-600 text-white px-3 py-2 rounded-lg">Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with animated SVGs -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-indigo-50 to-white py-24">
+    <!-- Animated background SVG shapes -->
+    <svg class="absolute left-[-8%] top-[-6%] w-96 h-96 text-indigo-100 rotate-slow opacity-40" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden><g transform="translate(300,300)"><path d="M125,-138C167,-102,189,-51,179,-8C169,35,128,70,86,110C44,150,-1,195,-44,197C-87,199,-129,159,-155,110C-180,61,-190,3,-174,-47C-158,-97,-117,-141,-69,-169C-21,-197,33,-209,78,-198C123,-187,83,-173,125,-138Z" fill="currentColor"/></g></svg>
+    <svg class="absolute right-[-6%] bottom-[-6%] w-80 h-80 float-slower text-purple-100 opacity-35" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden><g transform="translate(300,300)"><path d="M80,-120C111,-103,144,-72,160,-36C176,0,176,44,154,75C132,105,88,123,44,141C0,159,-44,176,-79,160C-114,144,-141,94,-154,46C-167,-2,-167,-48,-144,-86C-121,-124,-86,-154,-42,-171C2,-187,46,-191,85,-176C124,-160,49,-137,80,-120Z" fill="currentColor"/></g></svg>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-20">
+      <div class="grid grid-cols-12 gap-6 items-center">
+        <div class="col-span-12 md:col-span-6" data-aos="fade-right">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">The Modern POS for Ethiopian Businesses.</h1>
+          <p class="text-gray-600 mb-6 max-w-xl">IPos is a powerful point of sale system built for Ethiopian retail and restaurants. Get fast checkouts, precise inventory, and integrated local payments.</p>
+          <div class="flex gap-3 flex-wrap">
+            <a href="#demo" class="bg-indigo-600 text-white px-5 py-3 rounded-xl font-semibold shadow hover:bg-indigo-700">Request a Demo</a>
+            <a href="#features" class="border border-indigo-600 text-indigo-600 px-5 py-3 rounded-xl font-medium hover:bg-indigo-50">See Features</a>
+            <a href="#pricing" class="chip">View Pricing</a>
+          </div>
+          <div class="mt-6 flex gap-3 items-center">
+            <div class="chip">✓ Ethiopian Payments</div>
+            <div class="chip">✓ Multi-store Ready</div>
+            <div class="chip">✓ Offline-ready</div>
+          </div>
+        </div>
+        <!-- Hero screenshot composite -->
+        <div class="col-span-12 md:col-span-6 flex justify-center" data-aos="fade-left"><div class="relative w-full max-w-2xl"><div class="absolute -left-6 -top-6 w-48 mockup-screen p-3 transform rotate-3 scale-[0.95] border border-gray-100 shadow-lg"><svg width="100%" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Checkout mockup"><rect x="0" y="0" width="360" height="220" rx="10" fill="#ffffff" /><rect x="14" y="14" width="120" height="34" rx="6" fill="#f3f4f6"/><rect x="14" y="60" width="160" height="14" rx="6" fill="#eef2ff"/><rect x="14" y="82" width="320" height="10" rx="5" fill="#f3f4f6"/><rect x="14" y="100" width="320" height="10" rx="5" fill="#f3f4f6"/><rect x="14" y="118" width="320" height="10" rx="5" fill="#f3f4f6"/><rect x="14" y="152" width="120" height="36" rx="8" fill="#3b82f6"/><text x="24" y="176" fill="#fff" font-size="14" font-family="sans-serif">Checkout</text></svg></div><div class="relative mockup-screen p-6 mx-auto" style="border-radius:16px;"><svg width="100%" height="360" viewBox="0 0 920 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dashboard mockup" class="block"><rect x="0" y="0" width="920" height="560" rx="12" fill="#ffffff"/><rect x="18" y="18" width="884" height="54" rx="10" fill="#f8fafc"/><circle cx="56" cy="45" r="10" fill="#c7d2fe"/><rect x="84" y="30" width="200" height="20" rx="8" fill="#eef2ff"/><rect x="760" y="30" width="120" height="22" rx="8" fill="#f3f4f6"/><rect x="18" y="90" width="300" height="120" rx="12" fill="#f8fafc"/><text x="36" y="118" fill="#111827" font-size="18" font-family="sans-serif" font-weight="700">Today's Sales</text><text x="36" y="150" fill="#374151" font-size="28" font-family="sans-serif" font-weight="700">$12,842</text><rect x="18" y="230" width="300" height="120" rx="12" fill="#f8fafc"/><text x="36" y="258" fill="#111827" font-size="18" font-family="sans-serif" font-weight="700">Orders</text><text x="36" y="292" fill="#374151" font-size="28" font-family="sans-serif" font-weight="700">214</text><rect x="336" y="90" width="556" height="260" rx="12" fill="#fff"/><text x="352" y="118" fill="#111827" font-size="18" font-family="sans-serif" font-weight="700">Sales (Last 30 days)</text><polyline points="360,210 420,185 480,150 540,170 600,140 660,160 712,132" fill="none" stroke="#4f46e5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="352" y="300" width="520" height="36" rx="8" fill="#eef2ff"/><text x="364" y="324" fill="#4f46e5" font-size="13" font-weight="700">Revenue</text><rect x="336" y="370" width="260" height="160" rx="12" fill="#f8fafc"/><text x="352" y="398" fill="#111827" font-size="16" font-weight="700">Top Products</text><rect x="616" y="370" width="276" height="160" rx="12" fill="#f8fafc"/><text x="632" y="398" fill="#111827" font-size="16" font-weight="700">Recent Transactions</text><circle cx="820" cy="42" r="6" fill="#f97316"/><circle cx="848" cy="42" r="6" fill="#10b981"/></svg></div><div class="absolute -right-4 -bottom-6 w-40 mockup-screen p-3 transform -rotate-3 scale-95 border border-gray-100 shadow-lg"><svg width="100%" height="180" viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inventory mockup"><rect x="0" y="0" width="360" height="180" rx="10" fill="#fff"/><rect x="14" y="16" width="220" height="18" rx="8" fill="#f3f4f6"/><rect x="14" y="46" width="332" height="10" rx="6" fill="#f8fafc"/><rect x="14" y="62" width="332" height="10" rx="6" fill="#f8fafc"/><rect x="14" y="84" width="332" height="10" rx="6" fill="#f8fafc"/><rect x="14" y="118" width="120" height="36" rx="8" fill="#ef4444"/><text x="24" y="143" fill="#fff" font-size="14">Low Stock</text></svg></div></div></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Everything you need to run your business</h2>
+      <p class="text-gray-600 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">From the front counter to the back office, IPos provides a unified system to manage sales, inventory, customers, and employees efficiently.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1: Inventory -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">Advanced Inventory</h3>
+          <p class="text-gray-600">Track stock in real-time, create purchase orders, manage suppliers, and set low-stock alerts to prevent stockouts.</p>
+        </div>
+        <!-- Feature 2: CRM & Loyalty -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">CRM & Loyalty Program</h3>
+          <p class="text-gray-600">Build a customer database, view purchase history, and run your own points-based loyalty program to turn first-time buyers into lifelong fans.</p>
+        </div>
+        <!-- Feature 3: Reporting -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">Powerful Reporting</h3>
+          <p class="text-gray-600">Get actionable insights with end-of-day summaries, sales by item reports, and inventory value analytics to make informed decisions.</p>
+        </div>
+        <!-- Feature 4: Employee Management -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 012-2h4a2 2 0 012 2v1m-4 0h4" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">Employee Management</h3>
+          <p class="text-gray-600">Manage staff with secure PIN access, assign roles and permissions, and track sales by employee to measure performance and calculate commissions.</p>
+        </div>
+        <!-- Feature 5: Restaurant Features -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0c-.454-.303-.977-.454-1.5-.454A3.454 3.454 0 006 19v2h12v-2a3.454 3.454 0 00-3-3.454zM9 11a3 3 0 100-6 3 3 0 000 6z" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">Restaurant-Ready</h3>
+          <p class="text-gray-600">Manage tables with a visual layout, send orders directly to kitchen printers or a Kitchen Display System (KDS), and customize items with powerful modifiers.</p>
+        </div>
+        <!-- Feature 6: Hardware & Offline Sync -->
+        <div class="p-8 bg-gray-50 rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
+          <h3 class="text-xl font-bold mb-2">Hardware & Offline Sync</h3>
+          <p class="text-gray-600">Connect to receipt printers, barcode scanners, and customer-facing displays. Keep selling even when the internet is down with our robust offline mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="py-20 bg-indigo-50">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Built for businesses like yours</h2>
+        <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Whether you're running a single cafe or a multi-location retail chain, IPos is flexible enough to meet your needs.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Use Case 1 --><div class="text-center" data-aos="fade-up" data-aos-delay="200"><div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0c-.454-.303-.977-.454-1.5-.454A3.454 3.454 0 006 19v2h12v-2a3.454 3.454 0 00-3-3.454zM9 11a3 3 0 100-6 3 3 0 000 6z" /></svg></div><h3 class="font-semibold">Cafes & Restaurants</h3></div>
+          <!-- Use Case 2 --><div class="text-center" data-aos="fade-up" data-aos-delay="300"><div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg></div><h3 class="font-semibold">Retail & Boutiques</h3></div>
+          <!-- Use Case 3 --><div class="text-center" data-aos="fade-up" data-aos-delay="400"><div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg></div><h3 class="font-semibold">Supermarkets</h3></div>
+          <!-- Use Case 4 --><div class="text-center" data-aos="fade-up" data-aos-delay="500"><div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div><h3 class="font-semibold">Multi-Location Chains</h3></div>
+        </div>
+      </div>
+  </section>
+
+  <!-- === NEW: Integrations Section Focused on Ethiopia === -->
+  <section id="integrations" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Integrated with Local Payment Gateways</h2>
+      <p class="text-gray-600 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Accept payments from your customers seamlessly with Ethiopia's most popular payment providers, built right into IPos.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="p-8 bg-white rounded-2xl text-center shadow-sm" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold">Chapa</h3>
+        </div>
+        <div class="p-8 bg-white rounded-2xl text-center shadow-sm" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-xl font-bold">Telebirr</h3>
+        </div>
+        <div class="p-8 bg-white rounded-2xl text-center shadow-sm col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="text-xl font-bold">CBEBirr</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Testimonials Section (Localized) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6" data-aos="fade-up">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-6">Trusted by Ethiopian businesses</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <p class="text-gray-700 mb-4">"IPos is a game-changer. Integrating with Telebirr and Chapa was effortless, and our customers love the smooth checkout. The inventory management has saved us countless hours."</p>
+          <div class="font-semibold">Abebe T.</div>
+          <div class="text-sm text-gray-500">Owner, Addis Cafe</div>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <p class="text-gray-700 mb-4">"Finally, a POS that understands the Ethiopian market. The multi-store features and detailed reporting give me a perfect overview of my entire business. The support team is also fantastic."</p>
+          <div class="font-semibold">Fatuma A.</div>
+          <div class="text-sm text-gray-500">Manager, Selam Supermarket</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo iframe + CTA -->
+  <section id="demo" class="py-20 bg-indigo-50">
+    <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">See IPos in Action</h2>
+      <p class="text-gray-600 mb-6">Request a live, personalized demo and see how IPos can transform your business operations.</p>
+      <a href="#faq" class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700">Request a Live Demo</a>
+    </div>
+  </section>
+
+  <!-- Pricing (Localized) -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">Pricing Plans for Every Ethiopian Business</h2>
+      <p class="text-gray-500 mb-10 text-sm">All prices are in Ethiopian Birr (ETB) and can be billed monthly or annually.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-2xl bg-gray-50 shadow">
+          <h3 class="font-semibold text-lg mb-4">Basic</h3>
+          <div class="text-3xl font-extrabold mb-4">999<span class="text-base font-medium text-gray-500"> /month</span></div>
+          <ul class="text-left text-gray-600 space-y-2 mb-4">
+            <li>✓ Core POS Features</li>
+            <li>✓ Single Store Location</li>
+            <li>✓ Inventory Management</li>
+            <li>✓ Standard Email Support</li>
+          </ul>
+          <a href="#" class="inline-block w-full bg-white text-indigo-600 border border-indigo-200 px-5 py-2 rounded-lg font-semibold hover:bg-indigo-50">Get Started</a>
+        </div>
+        <div class="p-8 rounded-2xl bg-indigo-600 text-white border-2 border-indigo-600 shadow-lg relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-white text-indigo-600 text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</div>
+          <h3 class="font-semibold text-lg mb-4">Professional</h3>
+          <div class="text-3xl font-extrabold mb-4">2,499<span class="text-base font-medium opacity-70"> /month</span></div>
+          <ul class="text-left space-y-2 mb-4">
+            <li>✓ Everything in Basic</li>
+            <li>✓ Multi-Store Support</li>
+            <li>✓ Advanced Reporting</li>
+            <li>✓ Priority Phone & Email Support</li>
+          </ul>
+          <a href="#" class="inline-block w-full bg-white text-indigo-600 px-5 py-2 rounded-lg font-semibold hover:bg-indigo-100">Choose Professional</a>
+        </div>
+        <div class="p-8 rounded-2xl bg-gray-50 shadow">
+          <h3 class="font-semibold text-lg mb-4">Enterprise</h3>
+          <div class="text-3xl font-extrabold mb-4">Custom</div>
+          <ul class="text-left text-gray-600 space-y-2 mb-4">
+            <li>✓ Everything in Professional</li>
+            <li>✓ On-premise Deployment</li>
+            <li>✓ Custom Integrations</li>
+            <li>✓ Dedicated Support Agent</li>
+          </ul>
+          <a href="#faq" class="inline-block w-full bg-white text-indigo-600 border border-indigo-200 px-5 py-2 rounded-lg font-semibold hover:bg-indigo-50">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Updated) -->
+  <section id="faq" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="p-6 border border-gray-200 rounded-xl bg-white">
+          <summary class="font-semibold cursor-pointer flex justify-between items-center">
+            Do you support Ethiopian payment gateways?
+            <span class="faq-arrow text-indigo-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></span>
+          </summary>
+          <p class="mt-4 text-gray-600">Yes! This is one of our key features. IPos is fully integrated with Ethiopia's leading payment providers, including Chapa, Telebirr, and CBEBirr, allowing you to accept a wide range of local payment methods seamlessly.</p>
+        </details>
+        <details class="p-6 border border-gray-200 rounded-xl bg-white">
+          <summary class="font-semibold cursor-pointer flex justify-between items-center">
+            Can I migrate my data from another POS system?
+            <span class="faq-arrow text-indigo-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></span>
+          </summary>
+          <p class="mt-4 text-gray-600">Yes, you can import products and customers via a CSV file. For more complex migrations, our Professional and Enterprise plans include dedicated support to help ensure a smooth transition.</p>
+        </details>
+        <details class="p-6 border border-gray-200 rounded-xl bg-white">
+          <summary class="font-semibold cursor-pointer flex justify-between items-center">
+            What hardware is compatible with IPos?
+            <span class="faq-arrow text-indigo-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></span>
+          </summary>
+          <p class="mt-4 text-gray-600">IPos is a web-based application and works with most standard POS hardware, including receipt printers, cash drawers, and USB/Bluetooth barcode scanners that function as keyboard input devices.</p>
+        </details>
+        <details class="p-6 border border-gray-200 rounded-xl bg-white">
+          <summary class="font-semibold cursor-pointer flex justify-between items-center">
+            How does the "Offline-ready" feature work?
+            <span class="faq-arrow text-indigo-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg></span>
+          </summary>
+          <p class="mt-4 text-gray-600">IPos uses modern web technologies to cache essential application data. This means you can continue to process cash sales even if your internet connection drops. All transactions are saved locally and will automatically sync to the server once your connection is restored.</p>
+        </details>
+      </div>
+      <div class="mt-12 text-center">
+        <h3 class="text-2xl font-bold mb-4">Still have questions?</h3>
+        <p class="text-gray-600 mb-6">Contact our team for custom deployments, sales inquiries, or technical support.</p>
+        <a href="mailto:support@IPos.com" class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="mb-3">&copy; 2025 IPos Solutions PLC</div>
+      <div class="text-sm text-gray-500">Powering Ethiopian Businesses with modern technology.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true, duration:700, offset:90, easing:'ease-in-out'});
+  </script>
+</body>
+</html>
